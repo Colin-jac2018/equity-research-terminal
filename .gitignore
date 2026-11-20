@@ -1,0 +1,15 @@
+# secrets & env
+.env
+*.env
+.streamlit/secrets.toml
+# data, caches, runtime
+__pycache__/
+*.pyc
+venv/
+node_modules/
+*.pkl
+*.parquet
+study_log/
+research_log.json
+*_results/
+cache/

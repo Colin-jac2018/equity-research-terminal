@@ -1,0 +1,2 @@
+plan EDGE_STUDY_PLAN.md sha256 518fcf66bcf3576751896aa61467e70bfb56ad10cb40049b3fecbd2c793ac65e
+freeze_commit 78f1ee1fc7722c4f6d82b8556f61c43f04c1e9a1
