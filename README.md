@@ -78,19 +78,19 @@ Python · pandas / NumPy · Streamlit · an LLM for reasoning-only narration · 
 
 ## Repository layout
 
-- `docs/EDGE_STUDY_PLAN.public.md` — the study's pre-registration, public (redacted) edition.
-- `docs/SETUP_BACKTEST_PREREG.md` — pre-registration for the historical, code-only setup backtest.
-- `proofs/plan_freeze.txt` + `.ots` — the frozen plan's SHA-256 and freeze commit, plus its OpenTimestamps Bitcoin proof.
-- `code/` — the evaluation and analysis code: the placebo / plan-aware regrade harness, the pre-registered setup backtest, the readout and sector-neutral IC analysis, and the OpenTimestamps anchoring helper.
+- `EDGE_STUDY_PLAN.public.md` — the study's pre-registration, public (redacted) edition.
+- `SETUP_BACKTEST_PREREG.md` — pre-registration for the historical, code-only setup backtest.
+- `plan_freeze.txt` + `plan_freeze.txt.ots` — the frozen plan's SHA-256 and freeze commit, plus its OpenTimestamps Bitcoin proof.
+- `primary_analysis.py`, `readout_checks.py`, `regrade_placebo.py`, `setup_backtest.py`, `study_anchor.py` — the evaluation and analysis code: the readout and sector-neutral IC analysis, the placebo / plan-aware regrade harness, the pre-registered setup backtest, and the OpenTimestamps anchoring helper.
 
-**Intentionally omitted, and released at readout:** the signal engine itself — the exact archetype predicate definitions, the scoring prompt, and the feature/snapshot engineering. This is a deliberate *commit-reveal*: the proof files let you confirm **now** that a complete plan was frozen and Bitcoin-timestamped on 2026-11-05, and at readout the full plan and engine are published — at which point the full plan's SHA-256 will match the hash in `plan_freeze.txt`. It proves the pre-registration is real without handing over a copyable strategy. The `code/` files are here to read, not to run standalone; they import the omitted engine modules by design.
+**Intentionally omitted, and released at readout:** the signal engine itself — the exact archetype predicate definitions, the scoring prompt, and the feature/snapshot engineering. This is a deliberate *commit-reveal*: the proof files let you confirm **now** that a complete plan was frozen and Bitcoin-timestamped on 2026-11-05, and at readout the full plan and engine are published — at which point the full plan's SHA-256 will match the hash in `plan_freeze.txt`. It proves the pre-registration is real without handing over a copyable strategy. The `.py` files here are to read, not to run standalone; they import the omitted engine modules by design.
 
 ## Verify the timestamp yourself
 
-`proofs/plan_freeze.txt` holds the SHA-256 of the frozen plan and the freeze commit. Its `.ots` proof anchors that file to a Bitcoin block. With the [OpenTimestamps](https://opentimestamps.org) client:
+`plan_freeze.txt` holds the SHA-256 of the frozen plan and the freeze commit. Its `.ots` proof anchors that file to a Bitcoin block. With the [OpenTimestamps](https://opentimestamps.org) client:
 
 ```
-ots verify proofs/plan_freeze.txt.ots
+ots verify plan_freeze.txt.ots
 ```
 
 It reports the Bitcoin block that establishes the plan existed on its logged date — before any forward data was collected, and impossible to backdate.

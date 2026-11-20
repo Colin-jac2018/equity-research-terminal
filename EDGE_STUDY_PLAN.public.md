@@ -1,6 +1,6 @@
 # Edge Study — Pre-Registration (public edition)
 
-> **This is a redacted public edition.** The full plan was frozen on 2026-11-05, before any forward data was collected, and its SHA-256 was anchored to the Bitcoin blockchain via OpenTimestamps (see [`/proofs/plan_freeze.txt`](../proofs/plan_freeze.txt) and its `.ots` proof). This edition preserves the experimental design, statistics, and governance in full, and **redacts the reproducible specifics** — the exact signal definitions, the scoring prompt, the feature/snapshot engineering, and the operational parameter values. Those are marked `[redacted — in the frozen plan]`. The complete plan will be published at readout; anyone can then confirm its hash matches the proof anchored here.
+> **This is a redacted public edition.** The full plan was frozen on 2026-11-05, before any forward data was collected, and its SHA-256 was anchored to the Bitcoin blockchain via OpenTimestamps (see [`plan_freeze.txt`](plan_freeze.txt) and its `.ots` proof). This edition preserves the experimental design, statistics, and governance in full, and **redacts the reproducible specifics** — the exact signal definitions, the scoring prompt, the feature/snapshot engineering, and the operational parameter values. Those are marked `[redacted — in the frozen plan]`. The complete plan will be published at readout; anyone can then confirm its hash matches the proof anchored here.
 
 ---
 
